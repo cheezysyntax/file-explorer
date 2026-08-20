@@ -33,17 +33,24 @@ npm run db:migrate -- --name init
 
 The database is exposed on `127.0.0.1:1433` only. Stop it with `npm run db:down`.
 
-## Learn More
+## Deploy on Vercel
 
-To learn more about Next.js, take a look at the following resources:
+Vercel Functions cannot connect to the SQL Server container running on your local machine. In the Vercel project settings, add a `DATABASE_URL` environment variable that points to a hosted SQL Server instance, such as Azure SQL:
+
+```text
+sqlserver://<your-sql-server-host>:1433;database=FilesDb;user=<user>;password=<password>;encrypt=true;trustServerCertificate=true
+```
+
+Replace every value inside `<...>` with the real hosted SQL Server details. Do not enter `HOST` literally, and do not use `localhost`, `127.0.0.1`, or the Docker service name in the Vercel value. Run the Prisma migration against the hosted database before deploying:
+
+```bash
+DATABASE_URL="<hosted SQL Server URL>" npx prisma migrate deploy
+```
+
+After adding or changing the Vercel environment variable, redeploy the project. The hosted SQL Server must allow connections from Vercel and have the `FilesDb` database and `Files` table created.
+
+## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
