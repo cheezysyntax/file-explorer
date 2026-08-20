@@ -7,12 +7,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "predev": "npm run db:up",
     "lint": "eslint",
     "db:up": "docker compose up -d sqlserver",
     "db:down": "docker compose down",
     "db:status": "docker compose ps",
     "prisma:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev"
+    "db:migrate": "prisma migrate dev",
+    "prestart": "npm run db:up"
   },
   "dependencies": {
     "@prisma/adapter-mssql": "^7.9.1",
