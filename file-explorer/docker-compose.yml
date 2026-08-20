@@ -1,0 +1,31 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: file-explorer-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+    ports:
+      - "127.0.0.1:1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    restart: unless-stopped
+
+  sqlserver-init:
+    image: mcr.microsoft.com/mssql-tools:latest
+    depends_on:
+      - sqlserver
+    environment:
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+    volumes:
+      - ./docker/sqlserver/init.sql:/init.sql:ro
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - >-
+        until /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P
+        "$$MSSQL_SA_PASSWORD" -C -Q "SELECT 1" >/dev/null 2>&1; do sleep 2;
+        done; /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P
+        "$$MSSQL_SA_PASSWORD" -C -i /init.sql
+
+volumes:
+  sqlserver-data:

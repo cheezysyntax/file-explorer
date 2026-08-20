@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+}
+
+model Folder {
+  id        Int      @id @default(autoincrement())
+  name      String
+  itemCount Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model File {
+  id         Int      @id @default(autoincrement()) @map("Id")
+  name       String   @db.Text @map("Name")
+  path       String   @db.Text @map("Path")
+  iconType   String   @db.Text @map("IconType")
+  modifyDate DateTime @map("Modify Date")
+  uploadDate DateTime @map("Upload Date")
+
+  @@map("Files")
+}

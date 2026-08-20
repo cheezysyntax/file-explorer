@@ -1,0 +1,170 @@
+[
+  {
+    "FileType": "3ds",
+    "Path": "/files/3ds.png"
+  },
+  {
+    "FileType": "aac",
+    "Path": "/files/aac.png"
+  },
+  {
+    "FileType": "ai",
+    "Path": "/files/ai.png"
+  },
+  {
+    "FileType": "avi",
+    "Path": "/files/avi.png"
+  },
+  {
+    "FileType": "bmp",
+    "Path": "/files/bmp.png"
+  },
+  {
+    "FileType": "cad",
+    "Path": "/files/cad.png"
+  },
+  {
+    "FileType": "cdr",
+    "Path": "/files/cdr.png"
+  },
+  {
+    "FileType": "css",
+    "Path": "/files/css.png"
+  },
+  {
+    "FileType": "dat",
+    "Path": "/files/dat.png"
+  },
+  {
+    "FileType": "dll",
+    "Path": "/files/dll.png"
+  },
+  {
+    "FileType": "dmg",
+    "Path": "/files/dmg.png"
+  },
+  {
+    "FileType": "doc",
+    "Path": "/files/doc.png"
+  },
+  {
+    "FileType": "eps",
+    "Path": "/files/eps.png"
+  },
+  {
+    "FileType": "file",
+    "Path": "/files/file.png"
+  },
+  {
+    "FileType": "fla",
+    "Path": "/files/fla.png"
+  },
+  {
+    "FileType": "flv",
+    "Path": "/files/flv.png"
+  },
+  {
+    "FileType": "folder",
+    "Path": "/files/folder.png"
+  },
+  {
+    "FileType": "gif",
+    "Path": "/files/gif.png"
+  },
+  {
+    "FileType": "html",
+    "Path": "/files/html.png"
+  },
+  {
+    "FileType": "indd",
+    "Path": "/files/indd.png"
+  },
+  {
+    "FileType": "jpg",
+    "Path": "/files/jpg.png"
+  },
+  {
+    "FileType": "js",
+    "Path": "/files/js.png"
+  },
+  {
+    "FileType": "midi",
+    "Path": "/files/midi.png"
+  },
+  {
+    "FileType": "mov",
+    "Path": "/files/mov.png"
+  },
+  {
+    "FileType": "mp3",
+    "Path": "/files/mp3.png"
+  },
+  {
+    "FileType": "mpg",
+    "Path": "/files/mpg.png"
+  },
+  {
+    "FileType": "pdf",
+    "Path": "/files/pdf.png"
+  },
+  {
+    "FileType": "php",
+    "Path": "/files/php.png"
+  },
+  {
+    "FileType": "png",
+    "Path": "/files/png.png"
+  },
+  {
+    "FileType": "ppt",
+    "Path": "/files/ppt.png"
+  },
+  {
+    "FileType": "ps",
+    "Path": "/files/ps.png"
+  },
+  {
+    "FileType": "psd",
+    "Path": "/files/psd.png"
+  },
+  {
+    "FileType": "raw",
+    "Path": "/files/raw.png"
+  },
+  {
+    "FileType": "sql(1)",
+    "Path": "/files/sql(1).png"
+  },
+  {
+    "FileType": "sql",
+    "Path": "/files/sql.png"
+  },
+  {
+    "FileType": "svg",
+    "Path": "/files/svg.png"
+  },
+  {
+    "FileType": "tif",
+    "Path": "/files/tif.png"
+  },
+  {
+    "FileType": "txt",
+    "Path": "/files/txt.png"
+  },
+  {
+    "FileType": "wmv",
+    "Path": "/files/wmv.png"
+  },
+  {
+    "FileType": "xls",
+    "Path": "/files/xls.png"
+  },
+  {
+    "FileType": "xml",
+    "Path": "/files/xml.png"
+  },
+  {
+    "FileType": "zip",
+    "Path": "/files/zip.png"
+  }
+]

@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f4ef;
+  --foreground: #202522;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.tile {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #d8d8d0;
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.34);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: #aeb4aa;
+  background: #fffefa;
+}
+
+.tile span,
+.tile small {
+  color: #7d847e;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tile-icon {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.tile-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.tile strong {
+  font-size: 1.15rem;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+}
+
+.tile-featured {
+  border-color: #de5c3b;
+  background: #de5c3b;
+  color: #fffefa;
+}
+
+.tile-featured span,
+.tile-featured small {
+  color: #f9c2b3;
+}
+
+.tile-featured:hover {
+  border-color: #c8492b;
+  background: #c8492b;
+}
+
+@media (max-width: 700px) {
+  .tile {
+    min-height: 150px;
+    padding: 16px;
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
