@@ -10,6 +10,7 @@ if (!databaseUrl) {
 if (
   process.env.NODE_ENV === "production" &&
   process.env.VERCEL === "1" &&
+  process.env.NEXT_PHASE !== "phase-production-build" &&
   /sqlserver:\/\/(localhost|127\.0\.0\.1|HOST)(?=[:;])/i.test(databaseUrl)
 ) {
   throw new Error(
