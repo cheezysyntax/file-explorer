@@ -13,8 +13,7 @@
     "db:down": "docker compose down",
     "db:status": "docker compose ps",
     "prisma:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
-    "prestart": "npm run db:up"
+    "db:migrate": "prisma migrate dev"
   },
   "dependencies": {
     "@prisma/adapter-mssql": "^7.9.1",

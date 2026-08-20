@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Product brief.pdf",
+    "path": "/documents/product-brief.pdf",
+    "iconType": "pdf",
+    "modifyDate": "2026-08-12",
+    "uploadDate": "2026-08-01"
+  },
+  {
+    "id": 2,
+    "name": "Brand assets.psd",
+    "path": "/design/brand-assets.psd",
+    "iconType": "psd",
+    "modifyDate": "2026-08-15",
+    "uploadDate": "2026-08-03"
+  },
+  {
+    "id": 3,
+    "name": "Roadmap.xlsx",
+    "path": "/planning/roadmap.xlsx",
+    "iconType": "xls",
+    "modifyDate": "2026-08-10",
+    "uploadDate": "2026-07-28"
+  },
+  {
+    "id": 4,
+    "name": "Usage notes.txt",
+    "path": "/notes/usage-notes.txt",
+    "iconType": "txt",
+    "modifyDate": "2026-08-17",
+    "uploadDate": "2026-08-17"
+  },
+  {
+    "id": 5,
+    "name": "Preview image.jpg",
+    "path": "/previews/preview-image.jpg",
+    "iconType": "jpg",
+    "modifyDate": "2026-08-18",
+    "uploadDate": "2026-08-05"
+  }
+]

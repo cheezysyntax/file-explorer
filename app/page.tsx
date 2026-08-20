@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import imageIndex from "@/public/files/images.json";
-import prisma from "@/lib/prisma";
+import mockFiles from "@/data/mockdata.json";
 
 export const dynamic = "force-dynamic";
 
@@ -10,9 +10,12 @@ function withoutExtension(fileName: string) {
 }
 
 export default async function Home() {
-  const files = await prisma.file.findMany({
-    orderBy: { id: "asc" },
-  });
+  const files = process.env.NODE_ENV === "production"
+    ? mockFiles
+    : await (async () => {
+        const { default: prisma } = await import("@/lib/prisma");
+        return prisma.file.findMany({ orderBy: { id: "asc" } });
+      })();
 
   return (
     <main className="min-h-screen bg-[#f5f4ef] text-[#202522]">

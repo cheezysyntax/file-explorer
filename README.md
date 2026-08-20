@@ -35,19 +35,7 @@ The database is exposed on `127.0.0.1:1433` only. Stop it with `npm run db:down`
 
 ## Deploy on Vercel
 
-Vercel Functions cannot connect to the SQL Server container running on your local machine. In the Vercel project settings, add a `DATABASE_URL` environment variable that points to a hosted SQL Server instance, such as Azure SQL:
-
-```text
-sqlserver://<your-sql-server-host>:1433;database=FilesDb;user=<user>;password=<password>;encrypt=true;trustServerCertificate=true
-```
-
-Replace every value inside `<...>` with the real hosted SQL Server details. Do not enter `HOST` literally, and do not use `localhost`, `127.0.0.1`, or the Docker service name in the Vercel value. Run the Prisma migration against the hosted database before deploying:
-
-```bash
-DATABASE_URL="<hosted SQL Server URL>" npx prisma migrate deploy
-```
-
-After adding or changing the Vercel environment variable, redeploy the project. The hosted SQL Server must allow connections from Vercel and have the `FilesDb` database and `Files` table created.
+Production uses the checked-in `data/mockdata.json` file and does not connect to SQL Server. Docker and Prisma are used only during local development. Deploy the project to Vercel normally; no production `DATABASE_URL` is required.
 
 ## Learn More
 
